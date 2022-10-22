@@ -40,7 +40,7 @@ export const BackButton = styled.button`
   height: 3rem;
   background-color: #235c94;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
@@ -53,11 +53,13 @@ export const TextFieldWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
 `;
 
 export const Text = styled.p`
-  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
 `;
 
 // Form side
@@ -77,4 +79,24 @@ export const FormContainer = styled.div`
   height: 45rem;
   width: 35rem;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+`;
+
+export const FormRowWrapper = styled.div`
+  width: 91%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+`;
+
+export const FormTitle = styled.h1`
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
 `;
