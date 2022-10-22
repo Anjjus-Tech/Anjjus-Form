@@ -16,6 +16,10 @@ import {
 
 import { Input } from '../Styles/Components/Input';
 import { Button } from '../Styles/Components/Button';
+import { ProgressBar1 } from './Components/ProgressBar1';
+import { ProgressBar2 } from './Components/ProgressBar2';
+import { StepOne } from './Forms/StepOne';
+import { StepTwo } from './Forms/StepTwo';
 
 function Form(): JSX.Element {
   return (
@@ -31,14 +35,7 @@ function Form(): JSX.Element {
         </LeftWrapper>
         <RightWrapper>
           <FormContainer>
-            <FormTitle>Precisamos conhecer você melhor</FormTitle>
-            <Input placeholder={'Nome completos'} />
-            <FormRowWrapper>
-              <Input placeholder={'CPF'} />
-              <Input placeholder={'Data de Nascimento'} />
-            </FormRowWrapper>
-            <Input placeholder={'Seu melhor e-mail'} />
-            <Input placeholder={'Número de celular'} />
+            <StepTwo />
             <Button>Próximo</Button>
             <p
               style={{
