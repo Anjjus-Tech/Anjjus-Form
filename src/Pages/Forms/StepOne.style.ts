@@ -100,3 +100,20 @@ export const FormTitle = styled.h1`
   font-family: 'Ubuntu', sans-serif;
   color: black;
 `;
+
+export const FromWrapper = styled.form``;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 96%;
+`;
+
+export const ErrorMsg = styled.span`
+  font-size: x-small;
+  position: absolute;
+  color: red;
+  top: 2px;
+  left: 2px;
+`;
