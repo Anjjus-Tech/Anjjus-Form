@@ -59,4 +59,5 @@ export const {
   fillExternalBankAccountInfo,
   fillPersonalInfo,
   fillpixtInfo,
+  changeStep
 } = formSlice.actions;
