@@ -38,3 +38,8 @@ type ClientInfoInputType = {
   sex: string | null,
   occupation: string | null,
 }
+
+type FormStateType = {
+  client: ClientInfoInputType,
+  step: number,
+}

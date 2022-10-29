@@ -1,30 +1,33 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initState: ClientInfoInputType = {
-  address: {
-    city: null,
-    complement: null,
-    country: null,
-    district: null,
-    number: null,
-    postcode: null,
-    stateCode: null,
-    streetAddress: null,
+const initState: FormStateType= {
+  client: {
+    address: {
+      city: null,
+      complement: null,
+      country: null,
+      district: null,
+      number: null,
+      postcode: null,
+      stateCode: null,
+      streetAddress: null,
+    },
+    externalBankAccount: null,
+    pix: null,
+    birth_date: null,
+    cellphone: null,
+    cpf: null,
+    email: null,
+    identification_doc_number: null,
+    identification_doc_type: null,
+    issue_date: null,
+    issuer: null,
+    marital_status: null,
+    name: null,
+    occupation: null,
+    sex: null,
   },
-  externalBankAccount: null,
-  pix: null,
-  birth_date: null,
-  cellphone: null,
-  cpf: null,
-  email: null,
-  identification_doc_number: null,
-  identification_doc_type: null,
-  issue_date: null,
-  issuer: null,
-  marital_status: null,
-  name: null,
-  occupation: null,
-  sex: null,
+  step: 1
 }
 
 const formSlice = createSlice({
@@ -32,17 +35,20 @@ const formSlice = createSlice({
   initialState: initState,
   reducers: {
     fillPersonalInfo: (state, action:PayloadAction<ClientInfoInputType>) => {
-      state = {...action.payload}
+      state.client = {...action.payload}
     },
     fillAddressInfo: (state, action:PayloadAction<AddressInpType>) => {
-      state.address = {...action.payload}
+      state.client.address = {...action.payload}
     },
     fillExternalBankAccountInfo: (state, action:PayloadAction<ExternalBankAccountInputType>) => {
-      state.externalBankAccount = {...action.payload}
+      state.client.externalBankAccount = {...action.payload}
     },
     fillpixtInfo: (state, action:PayloadAction<PixInputType>) => {
-      state.pix = {...action.payload}
+      state.client.pix = {...action.payload}
     },
+    changeStep: (state, action:PayloadAction<number>) => {
+      state.step = action.payload
+    }
   },
 });
 
