@@ -2,8 +2,14 @@ import React from 'react';
 import { ProgressBar2 } from '../Components/ProgressBar2';
 import { FormRowWrapper, FormTitle } from './StepTwo.style';
 import { Input } from '../../Styles/Components/Input';
+import { useAppDispatch } from '../../hooks';
+import { changeStep } from '../../store/slices/formSlice';
+import { Button } from '../../Styles/Components/Button';
 
 function StepTwo(): JSX.Element {
+
+  const dispatch = useAppDispatch()
+
   return (
     <>
       <ProgressBar2 />
@@ -28,6 +34,7 @@ function StepTwo(): JSX.Element {
         <Input placeholder={'Cidade'} />
         <Input placeholder={'Bairro'} />
       </FormRowWrapper>
+      <Button onClick={() => {dispatch(changeStep(1))}}>Próximo</Button>
     </>
   );
 }

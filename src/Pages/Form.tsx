@@ -20,8 +20,12 @@ import { ProgressBar1 } from './Components/ProgressBar1';
 import { ProgressBar2 } from './Components/ProgressBar2';
 import { StepOne } from './Forms/StepOne';
 import { StepTwo } from './Forms/StepTwo';
+import { useAppSelector } from '../hooks';
 
 function Form(): JSX.Element {
+
+  const actualStep = useAppSelector(state => state.formReducer.step)
+
   return (
     <Container>
       <Header></Header>
@@ -35,16 +39,9 @@ function Form(): JSX.Element {
         </LeftWrapper>
         <RightWrapper>
           <FormContainer>
-            <StepTwo />
-            <Button>Próximo</Button>
-            <p
-              style={{
-                fontFamily: 'Ubuntu',
-                cursor: 'pointer',
-              }}
-            >
-              Já possui uma proposta de crédito em andamento? clique aqui
-            </p>
+            {actualStep === 1 && <StepOne />}
+            {actualStep === 2 && <StepTwo />}
+
           </FormContainer>
         </RightWrapper>
       </ContentWrapper>
