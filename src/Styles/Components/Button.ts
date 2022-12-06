@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  width: 90%;
+  width: 100%;
   height: 3rem;
   border-radius: 4px;
   border: none;
@@ -10,4 +10,5 @@ export const Button = styled.button`
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
 `;

@@ -74,26 +74,11 @@ export const RightWrapper = styled.section`
   border: 1px solid white;
 `;
 
-export const FormContainer = styled.div`
-  background-color: white;
-  height: 45rem;
-  width: 35rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-`;
-
-export const FormRowWrapper = styled.div`
-  width: 91%;
+export const InputRowWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  justify-content: space-between;
 `;
 
 export const FormTitle = styled.h1`
@@ -101,13 +86,20 @@ export const FormTitle = styled.h1`
   color: black;
 `;
 
-export const FromWrapper = styled.form``;
+export const FromWrapper = styled.form`
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 0.6rem;
   position: relative;
-  width: 96%;
+  width: 100%;
 `;
 
 export const ErrorMsg = styled.span`
